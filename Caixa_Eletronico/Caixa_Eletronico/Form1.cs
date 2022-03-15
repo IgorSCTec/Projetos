@@ -29,7 +29,7 @@ namespace Caixa_Eletronico
                 //double valorDigitado = double.Parse(txtbox1.Text);
                 //string strDados = string.Join("\n", valorDigitado);
                 // MessageBox.Show(strDados);
-                Operacao();
+                //Operacao();
             }
         }
 

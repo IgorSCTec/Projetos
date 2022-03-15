@@ -1,0 +1,16 @@
+D:\Drive\GitHub\GitHub\Projetos\Caixa_Eletronico\Caixa_Eletronico\bin\Debug\netcoreapp3.1\Caixa_Eletronico.exe
+D:\Drive\GitHub\GitHub\Projetos\Caixa_Eletronico\Caixa_Eletronico\bin\Debug\netcoreapp3.1\Caixa_Eletronico.deps.json
+D:\Drive\GitHub\GitHub\Projetos\Caixa_Eletronico\Caixa_Eletronico\bin\Debug\netcoreapp3.1\Caixa_Eletronico.runtimeconfig.json
+D:\Drive\GitHub\GitHub\Projetos\Caixa_Eletronico\Caixa_Eletronico\bin\Debug\netcoreapp3.1\Caixa_Eletronico.runtimeconfig.dev.json
+D:\Drive\GitHub\GitHub\Projetos\Caixa_Eletronico\Caixa_Eletronico\bin\Debug\netcoreapp3.1\Caixa_Eletronico.dll
+D:\Drive\GitHub\GitHub\Projetos\Caixa_Eletronico\Caixa_Eletronico\bin\Debug\netcoreapp3.1\Caixa_Eletronico.pdb
+D:\Drive\GitHub\GitHub\Projetos\Caixa_Eletronico\Caixa_Eletronico\obj\Debug\netcoreapp3.1\Caixa_Eletronico.csproj.AssemblyReference.cache
+D:\Drive\GitHub\GitHub\Projetos\Caixa_Eletronico\Caixa_Eletronico\obj\Debug\netcoreapp3.1\Caixa_Eletronico.Form1.resources
+D:\Drive\GitHub\GitHub\Projetos\Caixa_Eletronico\Caixa_Eletronico\obj\Debug\netcoreapp3.1\Caixa_Eletronico.csproj.GenerateResource.cache
+D:\Drive\GitHub\GitHub\Projetos\Caixa_Eletronico\Caixa_Eletronico\obj\Debug\netcoreapp3.1\Caixa_Eletronico.GeneratedMSBuildEditorConfig.editorconfig
+D:\Drive\GitHub\GitHub\Projetos\Caixa_Eletronico\Caixa_Eletronico\obj\Debug\netcoreapp3.1\Caixa_Eletronico.AssemblyInfoInputs.cache
+D:\Drive\GitHub\GitHub\Projetos\Caixa_Eletronico\Caixa_Eletronico\obj\Debug\netcoreapp3.1\Caixa_Eletronico.AssemblyInfo.cs
+D:\Drive\GitHub\GitHub\Projetos\Caixa_Eletronico\Caixa_Eletronico\obj\Debug\netcoreapp3.1\Caixa_Eletronico.csproj.CoreCompileInputs.cache
+D:\Drive\GitHub\GitHub\Projetos\Caixa_Eletronico\Caixa_Eletronico\obj\Debug\netcoreapp3.1\Caixa_Eletronico.dll
+D:\Drive\GitHub\GitHub\Projetos\Caixa_Eletronico\Caixa_Eletronico\obj\Debug\netcoreapp3.1\Caixa_Eletronico.pdb
+D:\Drive\GitHub\GitHub\Projetos\Caixa_Eletronico\Caixa_Eletronico\obj\Debug\netcoreapp3.1\Caixa_Eletronico.genruntimeconfig.cache

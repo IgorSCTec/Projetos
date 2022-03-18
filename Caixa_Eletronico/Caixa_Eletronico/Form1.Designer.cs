@@ -67,6 +67,7 @@ namespace Caixa_Eletronico
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Caixa Eletrônico";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

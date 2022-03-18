@@ -1,0 +1,10 @@
+D:\Drive\GitHub\GitHub\Projetos\Conversao_Escalas_Temperatura\Conversao_Escalas_Temperatura\bin\Debug\Conversao_Escalas_Temperatura.exe.config
+D:\Drive\GitHub\GitHub\Projetos\Conversao_Escalas_Temperatura\Conversao_Escalas_Temperatura\bin\Debug\Conversao_Escalas_Temperatura.exe
+D:\Drive\GitHub\GitHub\Projetos\Conversao_Escalas_Temperatura\Conversao_Escalas_Temperatura\bin\Debug\Conversao_Escalas_Temperatura.pdb
+D:\Drive\GitHub\GitHub\Projetos\Conversao_Escalas_Temperatura\Conversao_Escalas_Temperatura\obj\Debug\Conversao_Escalas_Temperatura.csproj.AssemblyReference.cache
+D:\Drive\GitHub\GitHub\Projetos\Conversao_Escalas_Temperatura\Conversao_Escalas_Temperatura\obj\Debug\Conversao_Escalas_Temperatura.Form1.resources
+D:\Drive\GitHub\GitHub\Projetos\Conversao_Escalas_Temperatura\Conversao_Escalas_Temperatura\obj\Debug\Conversao_Escalas_Temperatura.Properties.Resources.resources
+D:\Drive\GitHub\GitHub\Projetos\Conversao_Escalas_Temperatura\Conversao_Escalas_Temperatura\obj\Debug\Conversao_Escalas_Temperatura.csproj.GenerateResource.cache
+D:\Drive\GitHub\GitHub\Projetos\Conversao_Escalas_Temperatura\Conversao_Escalas_Temperatura\obj\Debug\Conversao_Escalas_Temperatura.csproj.CoreCompileInputs.cache
+D:\Drive\GitHub\GitHub\Projetos\Conversao_Escalas_Temperatura\Conversao_Escalas_Temperatura\obj\Debug\Conversao_Escalas_Temperatura.exe
+D:\Drive\GitHub\GitHub\Projetos\Conversao_Escalas_Temperatura\Conversao_Escalas_Temperatura\obj\Debug\Conversao_Escalas_Temperatura.pdb

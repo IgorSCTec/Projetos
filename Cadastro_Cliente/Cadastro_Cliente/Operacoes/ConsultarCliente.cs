@@ -13,21 +13,20 @@ namespace Cadastro_Cliente
 {
     public class ConsultarCliente
     {
-         
-        public List<Cliente> Consultar()
+              
+        public List<Cliente> Consultar(string nome)
         {
-            var nome = new NomeConsult();
-            MessageBox.Show($"3 {nome.Nome}");
-            var teste = nome.Nome;
-            MessageBox.Show($"4 {teste}");
+
+           
             
             const string connectionString = "Server=localhost,1433;Database=TesteCadastro;User ID=sa;Password=Teste@123";
 
             using (var connection = new SqlConnection(connectionString))
             {
-                return connection.Query<Cliente>($"SELECT [Nome], [Phone], [Email] FROM [Cliente] WHERE [Nome] Like '%{teste}%'").ToList();
+                var sql = $"SELECT [Nome], [Phone], [Email] FROM [Cliente] WHERE [Nome] LIKE @teste";
+                return connection.Query<Cliente>(sql, new { teste = $"%{nome}%" }).ToList();
             }
-
+            
         }
     }
 }

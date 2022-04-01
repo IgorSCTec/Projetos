@@ -28,14 +28,10 @@ namespace Cadastro_Cliente
             
             if (e.KeyChar == 13)
             {
-                MessageBox.Show($"1 {txtNomeConsult.Text}");
-                var nome = new NomeConsult();
-                nome.Nome = txtNomeConsult.Text;
-                MessageBox.Show($"2 {nome.Nome}");
                 var cliente = new ConsultarCliente();
-                cliente.Consultar();
+                cliente.Consultar(txtNomeConsult.Text);
                 var consultar = new ConsultarCliente();
-                clienteBindingSource.DataSource = consultar.Consultar();
+                clienteBindingSource.DataSource = consultar.Consultar(txtNomeConsult.Text);
             }
            
 

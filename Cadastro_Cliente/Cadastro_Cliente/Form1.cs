@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cadastro_Cliente.Operacoes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,12 @@ namespace Cadastro_Cliente
         {
             var form2 = new Form2();
             form2.Show();
+        }
+
+        private void bntAlterar_Click(object sender, EventArgs e)
+        {
+            var alterar = new ModificarCliente();
+            alterar.Modificar();
         }
     }
 }

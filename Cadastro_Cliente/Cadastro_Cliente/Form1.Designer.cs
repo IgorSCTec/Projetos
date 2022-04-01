@@ -40,6 +40,8 @@ namespace Cadastro_Cliente
             this.lblEmail = new System.Windows.Forms.Label();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
+            this.bntAlterar = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNome
@@ -108,7 +110,7 @@ namespace Cadastro_Cliente
             // 
             // btnCadastro
             // 
-            this.btnCadastro.Location = new System.Drawing.Point(140, 216);
+            this.btnCadastro.Location = new System.Drawing.Point(8, 222);
             this.btnCadastro.Name = "btnCadastro";
             this.btnCadastro.Size = new System.Drawing.Size(234, 29);
             this.btnCadastro.TabIndex = 8;
@@ -118,7 +120,7 @@ namespace Cadastro_Cliente
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(140, 257);
+            this.btnConsultar.Location = new System.Drawing.Point(8, 257);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(234, 29);
             this.btnConsultar.TabIndex = 9;
@@ -126,11 +128,32 @@ namespace Cadastro_Cliente
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
+            // bntAlterar
+            // 
+            this.bntAlterar.Location = new System.Drawing.Point(247, 222);
+            this.bntAlterar.Name = "bntAlterar";
+            this.bntAlterar.Size = new System.Drawing.Size(234, 29);
+            this.bntAlterar.TabIndex = 10;
+            this.bntAlterar.Text = "Alterar Cliente";
+            this.bntAlterar.UseVisualStyleBackColor = true;
+            this.bntAlterar.Click += new System.EventHandler(this.bntAlterar_Click);
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.Location = new System.Drawing.Point(247, 257);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(234, 29);
+            this.btnDeletar.TabIndex = 11;
+            this.btnDeletar.Text = "Deletar Cliente";
+            this.btnDeletar.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 298);
+            this.Controls.Add(this.btnDeletar);
+            this.Controls.Add(this.bntAlterar);
             this.Controls.Add(this.btnConsultar);
             this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.lblEmail);
@@ -161,6 +184,8 @@ namespace Cadastro_Cliente
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Button btnCadastro;
         private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.Button bntAlterar;
+        private System.Windows.Forms.Button btnDeletar;
     }
 }
 

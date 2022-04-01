@@ -48,7 +48,7 @@ namespace Cadastro_Cliente
                     cadastrar.CreateDate,
                 }); 
                 
-                MessageBox.Show("Cliente Cadastrado");
+                MessageBox.Show("Cliente Cadastrado.");
             }
         }
     }

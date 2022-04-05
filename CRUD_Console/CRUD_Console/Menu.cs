@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Threading;
 using CRUD_Console.Operacoes;
+using Microsoft.Data.SqlClient;
 
 namespace CRUD_Console
 {
     class Menu
     {
-        public void MenuCRUD()
+        public void MenuCRUD(SqlConnection connection)
         {
             Console.Clear();
             Console.WriteLine("Clientes");
@@ -25,20 +26,20 @@ namespace CRUD_Console
                 Console.WriteLine("");
                 Console.Write("Essa não é uma opção válida. Por gentileza selecionar a operação que deseja.");
                 Thread.Sleep(1000);
-                MenuCRUD();
+                MenuCRUD(connection);
             }
 
             switch (opcao)
             {
-                case 1: var cadastrar = new Insert(); cadastrar.InsertUser(); break;
-                case 2: var atualizar = new Update(); atualizar.Atualizar(); break;
-                case 3: var consultar = new Select(); consultar.ReadUser(); break;
-                case 4: var deletar = new Delete(); deletar.Deletar(); break;
+                case 1: var create = new Insert(); create.CreateUser(connection); break;
+                case 2: var update = new Update(); update.UpdateUser(connection); break;
+                case 3: var select = new Select(); select.ReadUser(connection); break;
+                case 4: var delete = new Delete(); delete.DeleteUser(connection); break;
                 default:
                     Console.WriteLine("");
                     Console.Write("Essa não é uma opção válida. Por gentileza selecionar a operação que deseja.");
                     Thread.Sleep(1000);
-                    MenuCRUD(); break;
+                    MenuCRUD(connection); break;
                     ;
             }
         }

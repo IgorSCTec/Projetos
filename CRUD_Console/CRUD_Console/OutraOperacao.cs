@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace CRUD_Console
 {
     class OutraOperacao
     {
-        public void OutraOperacaoCRUD()
+        public void OutraOperacaoCRUD(SqlConnection connection)
         {
             var menu = new Menu();
             Console.WriteLine("Deseja fazer mais alguma operação?");
@@ -18,7 +19,7 @@ namespace CRUD_Console
 
             if (escolha == "Sim")
             {
-                menu.MenuCRUD();
+                menu.MenuCRUD(connection);
             }
 
             if (escolha == "Não")
@@ -42,7 +43,7 @@ namespace CRUD_Console
 
                 if (escolha == "Sim")
                 {
-                    menu.MenuCRUD();
+                    menu.MenuCRUD(connection);
                 }
 
                 if (escolha == "Não")

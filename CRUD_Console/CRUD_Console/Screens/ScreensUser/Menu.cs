@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Threading;
-using CRUD_Console.Operacoes;
+using CRUD_Console.Screens.ScreensUser;
 using Microsoft.Data.SqlClient;
 
-namespace CRUD_Console
+
+namespace CRUD_Console.Screens
 {
     class Menu
     {

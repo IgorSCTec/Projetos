@@ -1,10 +1,9 @@
 ﻿using CRUD_Console.Models;
 using CRUD_Console.Repositories;
-using Dapper;
 using Microsoft.Data.SqlClient;
 using System;
 
-namespace CRUD_Console.Operacoes
+namespace CRUD_Console.Screens.ScreensUser
 {
     class Select
     {

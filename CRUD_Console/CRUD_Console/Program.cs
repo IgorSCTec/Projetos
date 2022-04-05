@@ -13,8 +13,10 @@ namespace CRUD_Console
         static void Main(string[] args)
         {
             var connection = new SqlConnection(connectionString);
+            connection.Open();
             var menu = new Menu();
             menu.MenuCRUD(connection);
+            connection.Close();
             Console.ReadKey();
         }
     }

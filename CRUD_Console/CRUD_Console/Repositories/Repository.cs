@@ -1,12 +1,8 @@
-﻿using CRUD_Console.Models;
-using Dapper;
+﻿using Dapper;
 using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CRUD_Console.Repositories
 {

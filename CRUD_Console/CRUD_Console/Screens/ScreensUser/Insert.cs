@@ -1,10 +1,9 @@
 ﻿using CRUD_Console.Models;
 using System;
-using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
 using CRUD_Console.Repositories;
 
-namespace CRUD_Console.Operacoes
+namespace CRUD_Console.Screens.ScreensUser
 {
     class Insert
     {

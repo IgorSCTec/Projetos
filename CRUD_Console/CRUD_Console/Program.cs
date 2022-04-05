@@ -1,7 +1,4 @@
-﻿using CRUD_Console.Models;
-using CRUD_Console.Repositories;
-using Dapper;
-using Dapper.Contrib.Extensions;
+﻿using CRUD_Console.Screens;
 using Microsoft.Data.SqlClient;
 using System;
 

@@ -1,4 +1,5 @@
 ﻿using CRUD_Console.Models;
+using CRUD_Console.Repositories;
 using Dapper;
 using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
@@ -8,16 +9,15 @@ namespace CRUD_Console.Operacoes
 {
     class Update
     {
-        const string connectionString = "Server=localhost,1433;Database=TesteCadastro;User ID=sa;Password=Teste@123;Trusted_Connection=False; TrustServerCertificate=True;";
-        public void Atualizar()
+        public void UpdateUser(SqlConnection connection)
         {
-            Console.WriteLine("");
-            using (var connection = new SqlConnection(connectionString))
-            {
+                Console.WriteLine("");
+
                 Console.WriteLine("Clientes Cadastrados");
                 Console.WriteLine("");
 
-                var clientes = connection.GetAll<Cliente>();
+                var repository = new Repository<Cliente>(connection);
+                var clientes = repository.ReadAll();
 
                 foreach (var item in clientes)
                 {
@@ -26,17 +26,18 @@ namespace CRUD_Console.Operacoes
                 }
 
                 Console.Write("Digite o nome do cliente que deseja Atualizar: ");
-                var nomeCliente = Console.ReadLine();
+                var nome = Console.ReadLine();
                 Console.WriteLine("");
 
                 Console.Clear();
 
                 var sql = $"SELECT [Id],[Nome],[Email],[Phone],[Birthdate],[CreateDate] FROM [Cliente] WHERE [Nome] LIKE @teste";
 
-                var cliente = connection.Query<Cliente>(sql, new { teste = $"%{nomeCliente}%" });
+                var repository2 = new Repository<Cliente>(connection);
+                var users = repository.Read(sql, nome);
 
 
-                foreach (var item in cliente)
+                foreach (var item in users)
                 {
                     Console.WriteLine($"Id: {item.Id} - Nome: {item.Nome} - E-mail: {item.Email} - Telefone: {item.Phone} - Data de Nascimento: {item.Birthdate} - Data de Cadastro: {item.CreateDate}");
                     Console.WriteLine("");
@@ -50,90 +51,92 @@ namespace CRUD_Console.Operacoes
                 int opcao = int.Parse(Console.ReadLine());
                 Console.WriteLine("");
 
-                
 
-                
+
+
                 switch (opcao)
                 {
-                    case 1: AlterarNome(nomeCliente); break;
+                    case 1: AlterarNome(nome, connection); break;
 
-                    case 2: AlterarEmail(nomeCliente);  break;
+                    case 2: AlterarEmail(nome, connection); break;
 
-                    case 3:  AlterarPhone(nomeCliente); break;
+                    case 3: AlterarPhone(nome, connection); break;
 
-                    case 4:  AlterarBirthdate(nomeCliente); break;
+                    case 4: AlterarBirthdate(nome, connection); break;
 
                     default:
                         Console.WriteLine("");
                         Console.Write("Essa não é uma opção válida. Por gentileza selecionar a operação que deseja.");
 
-                        Atualizar();  break;
+                        break;
 
                 }
-            }
-        }
 
-        public void AlterarNome(string antigoNome)
-        {
-            using (var connection = new SqlConnection(connectionString))
+            }
+
+
+            public static void AlterarNome(string antigoNome, SqlConnection connection)
             {
                 Console.Write("Digite o novo Nome: ");
                 var novoNome = Console.ReadLine();
                 Console.WriteLine("");
                 var update = $"UPDATE[Cliente] SET [Nome] = @novoNome WHERE [Nome] Like @antigoNome";
-                var rows = connection.Execute(update, new { novoNome = $"{novoNome}", antigoNome = $"%{antigoNome}%" });
+
+                var repository = new Repository<Cliente>(connection);
+                repository.Update(update, novoNome, antigoNome);
+
                 Console.WriteLine("Cadastro Alterado com sucesso.");
                 Console.WriteLine("");
                 var outraOperacao = new OutraOperacao();
-                outraOperacao.OutraOperacaoCRUD();
-            }
-        }
+                outraOperacao.OutraOperacaoCRUD(connection);
 
-        public void AlterarEmail(string clienteNome)
-        {
-            using (var connection = new SqlConnection(connectionString))
+            }
+
+            public static void AlterarEmail(string antigoNome, SqlConnection connection)
             {
                 Console.Write("Digite o novo E-mail: ");
                 var novoEmail = Console.ReadLine();
                 Console.WriteLine("");
                 var update = $"UPDATE[Cliente] SET [Email] = @novoNome WHERE [Nome] Like @antigoNome";
-                connection.Execute(update, new { novoNome = $"{novoEmail}", antigoNome = $"%{clienteNome}%" });
+
+                var repository = new Repository<Cliente>(connection);
+                repository.Update(update, novoEmail, antigoNome);
+
                 Console.WriteLine("Cadastro Alterado com sucesso.");
                 Console.WriteLine("");
                 var outraOperacao = new OutraOperacao();
-                outraOperacao.OutraOperacaoCRUD();
-            };
-        }
+                outraOperacao.OutraOperacaoCRUD(connection);
+            }
 
-        public void AlterarPhone(string clienteNome)
-        {
-            using (var connection = new SqlConnection(connectionString))
+            public static void AlterarPhone(string antigoNome, SqlConnection connection)
             {
                 Console.Write("Digite o novo Telefone: ");
                 var novoPhone = Console.ReadLine();
                 Console.WriteLine("");
                 var update = $"UPDATE[Cliente] SET [Phone] = @novoNome WHERE [Nome] Like @antigoNome";
-                connection.Execute(update, new { novoNome = $"{novoPhone}", antigoNome = $"%{clienteNome}%" });
+
+                var repository = new Repository<Cliente>(connection);
+                repository.Update(update, novoPhone, antigoNome);
+
                 Console.WriteLine("Cadastro Alterado com sucesso.");
                 Console.WriteLine("");
                 var outraOperacao = new OutraOperacao();
-                outraOperacao.OutraOperacaoCRUD();
+                outraOperacao.OutraOperacaoCRUD(connection);
             }
-        }
 
-        public void AlterarBirthdate(string clienteNome)
-        {
-            using (var connection = new SqlConnection(connectionString))
+            public static void AlterarBirthdate(string antigoNome, SqlConnection connection)
             {
-                Console.WriteLine("Digite a nova Data de Nascimento: ");
+                Console.Write("Digite a nova Data de Nascimento: ");
                 var novoBirthdate = DateTime.Parse(Console.ReadLine());
                 var update = $"UPDATE[Cliente] SET [Birthdate] = @novoNome WHERE [Nome] Like @antigoNome";
-                connection.Execute(update, new { novoNome = novoBirthdate, antigoNome = $"%{clienteNome}%" });
+
+                var repository = new Repository<Cliente>(connection);
+                repository.Update(update, novoBirthdate, antigoNome);
+
                 Console.WriteLine("Cadastro Alterado com sucesso.");
                 Console.WriteLine("");
                 var outraOperacao = new OutraOperacao();
-                outraOperacao.OutraOperacaoCRUD();
+                outraOperacao.OutraOperacaoCRUD(connection);
             }
-        }
     }
 }

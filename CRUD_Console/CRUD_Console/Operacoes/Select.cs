@@ -1,4 +1,5 @@
 ﻿using CRUD_Console.Models;
+using CRUD_Console.Repositories;
 using Dapper;
 using Microsoft.Data.SqlClient;
 using System;
@@ -7,29 +8,27 @@ namespace CRUD_Console.Operacoes
 {
     class Select
     {
-        const string connectionString = "Server=localhost,1433;Database=TesteCadastro;User ID=sa;Password=Teste@123;Trusted_Connection=False; TrustServerCertificate=True;";
-        public void ReadUser()
+       
+        public void ReadUser(SqlConnection connection)
         {
-            Console.WriteLine("");
-            Console.Write("Digite o nome que deseja consultar: ");
-            var nome = Console.ReadLine();
-            Console.WriteLine("");
-
-            using (var connection = new SqlConnection(connectionString))
-            {
+                Console.WriteLine("");
+                Console.Write("Digite o nome que deseja consultar: ");
+                var nome = Console.ReadLine();
+                Console.WriteLine("");
                 var sql = $"SELECT [Id],[Nome],[Email],[Phone],[Birthdate],[CreateDate] FROM [Cliente] WHERE [Nome] LIKE @teste";
 
-                var cliente = connection.Query<Cliente>(sql, new { teste = $"%{nome}%" });
+                var repository = new Repository<Cliente>(connection);
+                var users = repository.Read(sql, nome);
 
-                foreach(var item in cliente)
+                foreach (var item in users)
                 {
                     Console.WriteLine($"Id: {item.Id} - Nome: {item.Nome} - E-mail: {item.Email} - Telefone: {item.Phone} - Data de Nascimento: {item.Birthdate} - Data de Cadastro: {item.CreateDate}");
                 }
-            }
 
-            Console.WriteLine("");
-            var outraOperacao = new OutraOperacao();
-            outraOperacao.OutraOperacaoCRUD();
+
+                Console.WriteLine("");
+                var outraOperacao = new OutraOperacao();
+                outraOperacao.OutraOperacaoCRUD(connection);
         }
     }
 }

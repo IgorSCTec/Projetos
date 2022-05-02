@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\ProjetoCalculadora\\Projetos\\GerenciadoDeTarefas\\GerenciadoDeTarefas\\GerenciadoDeTarefas.csproj": {}
+    "D:\\Drive\\New_GitHubi\\Projetos\\GerenciadoDeTarefas\\GerenciadoDeTarefas\\GerenciadoDeTarefas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\ProjetoCalculadora\\Projetos\\GerenciadoDeTarefas\\GerenciadoDeTarefas\\GerenciadoDeTarefas.csproj": {
+    "D:\\Drive\\New_GitHubi\\Projetos\\GerenciadoDeTarefas\\GerenciadoDeTarefas\\GerenciadoDeTarefas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\ProjetoCalculadora\\Projetos\\GerenciadoDeTarefas\\GerenciadoDeTarefas\\GerenciadoDeTarefas.csproj",
+        "projectUniqueName": "D:\\Drive\\New_GitHubi\\Projetos\\GerenciadoDeTarefas\\GerenciadoDeTarefas\\GerenciadoDeTarefas.csproj",
         "projectName": "GerenciadoDeTarefas",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\ProjetoCalculadora\\Projetos\\GerenciadoDeTarefas\\GerenciadoDeTarefas\\GerenciadoDeTarefas.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\ProjetoCalculadora\\Projetos\\GerenciadoDeTarefas\\GerenciadoDeTarefas\\obj\\",
+        "projectPath": "D:\\Drive\\New_GitHubi\\Projetos\\GerenciadoDeTarefas\\GerenciadoDeTarefas\\GerenciadoDeTarefas.csproj",
+        "packagesPath": "C:\\Users\\igor.costa.DISTRIFILM\\.nuget\\packages\\",
+        "outputPath": "D:\\Drive\\New_GitHubi\\Projetos\\GerenciadoDeTarefas\\GerenciadoDeTarefas\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\igor.costa.DISTRIFILM\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -48,6 +48,20 @@
               "target": "Package",
               "version": "[5.0.16, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.16, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -71,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
